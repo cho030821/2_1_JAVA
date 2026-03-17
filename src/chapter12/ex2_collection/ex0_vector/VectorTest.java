@@ -6,11 +6,11 @@ import java.util.Vector;
 public class VectorTest {
     public static void main(String[] args) {
         Vector<Integer> vec = new Vector();
-        vec.add(1);
+        vec.add(1); 
         vec.add(11);
         vec.add(123);
 
-        
+
 
     }
 }
