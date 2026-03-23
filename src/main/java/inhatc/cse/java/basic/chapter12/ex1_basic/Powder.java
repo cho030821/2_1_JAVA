@@ -1,4 +1,4 @@
-package chapter12.ex1_basic;
+package main.java.inhatc.cse.java.basic.chapter12.ex1_basic;
 
 public class Powder {
     public void doPrinting() {
