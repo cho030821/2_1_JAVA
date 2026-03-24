@@ -1,6 +1,6 @@
-package chapter11.ex6_record;
+package main.java.inhatc.cse.java.basic.chapter11.ex6_record;
 
-import chapter11.HW.Student;
+
 
 public class studentInfoTest {
     public static void main(String[] args) {

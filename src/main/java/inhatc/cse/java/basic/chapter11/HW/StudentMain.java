@@ -1,4 +1,4 @@
-package chapter11.HW;
+package main.java.inhatc.cse.java.basic.chapter11.HW;
 
 public class StudentMain {
     public static void main(String[] args) {

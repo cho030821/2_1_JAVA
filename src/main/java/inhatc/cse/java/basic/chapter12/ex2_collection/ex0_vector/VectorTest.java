@@ -1,4 +1,4 @@
-package chapter12.ex2_collection.ex0_vector;
+package main.java.inhatc.cse.java.basic.chapter12.ex2_collection.ex0_vector;
 
 import java.awt.*;
 import java.util.Vector;

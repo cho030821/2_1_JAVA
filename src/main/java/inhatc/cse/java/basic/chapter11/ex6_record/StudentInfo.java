@@ -1,4 +1,4 @@
-package chapter11.ex6_record;
+package main.java.inhatc.cse.java.basic.chapter11.ex6_record;
 
 public record StudentInfo(int id, String name) {
     public static String  SCHOOL_NAME = "INHATC";
