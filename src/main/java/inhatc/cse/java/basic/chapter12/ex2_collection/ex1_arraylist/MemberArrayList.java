@@ -16,10 +16,10 @@ public class MemberArrayList {
             Member member = arraylist.get(i);
             if(member.getId()==id){
                 arraylist.remove(i);
-
-            }else {
-                System.out.println("잘못 쳤어요");
+                return true;
             }
+            System.out.println(id + "번 회원은 존재하지 않습니다. 잘못 쳤어요.");
+            return false;
 
         }
         return true;

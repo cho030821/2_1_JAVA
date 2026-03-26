@@ -32,12 +32,12 @@ public class GenericMethod {
     private static double makeRectangle(Point<Integer, Double> p1, Point<Integer, Double> p2) {
         double left = p1.getX();
         double right = p2.getX();
-        double top = p2.getY();
+        double top = p1.getY();
         double bottom = p2.getY();
 
         double width = right - left;
         double height  = bottom - top;
-        return width*bottom;
+        return width*height;
     }
 
 }
