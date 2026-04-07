@@ -13,5 +13,9 @@ public class FilterTest {
                 .filter(isPositive)
                 .forEach(System.out::println);
 
+        members.stream()
+                .filter(x -> x < 0)
+                .forEach(a -> System.out.println(a + " "));
+        System.out.println();
     }
 }
