@@ -1,6 +1,7 @@
 package main.java.inhatc.cse.java.basic.chapter12.ex2_collection.ex0_vector;
 
 import java.awt.*;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class VectorTest {
@@ -10,7 +11,6 @@ public class VectorTest {
         vec.add(11);
         vec.add(123);
 
-
-
+        vec.forEach(System.out::println);
     }
 }
