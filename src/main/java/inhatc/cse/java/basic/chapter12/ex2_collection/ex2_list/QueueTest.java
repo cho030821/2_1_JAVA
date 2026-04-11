@@ -1,4 +1,4 @@
-package main.java.inhatc.cse.java.basic.chapter12.ex2_collection.ex3_list;
+package main.java.inhatc.cse.java.basic.chapter12.ex2_collection.ex2_list;
 
 import java.util.LinkedList;
 import java.util.Queue;
