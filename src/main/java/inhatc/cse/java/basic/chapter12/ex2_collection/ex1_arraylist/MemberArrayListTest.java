@@ -15,5 +15,6 @@ public class MemberArrayListTest {
         list.addMember(m2);
         list.showAllMember();
         list.removeMember(102);
+        list.showAllMember();
     }
 }

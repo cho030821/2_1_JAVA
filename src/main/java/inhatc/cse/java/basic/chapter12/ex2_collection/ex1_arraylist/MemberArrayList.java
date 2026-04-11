@@ -11,6 +11,8 @@ public class MemberArrayList {
     public void addMember(Member member){
         arraylist.add(member);
     }
+
+
     public boolean removeMember(int id) {
         for (int i = 0; i < arraylist.size(); i++) {
             Member member = arraylist.get(i);
@@ -18,11 +20,11 @@ public class MemberArrayList {
                 arraylist.remove(i);
                 return true;
             }
-            System.out.println(id + "번 회원은 존재하지 않습니다. 잘못 쳤어요.");
-            return false;
+
 
         }
-        return true;
+        System.out.println(id + "번 회원은 존재하지 않습니다. 잘못 쳤어요.");
+        return false;
     }
     public void showAllMember(){
         for(Member member: arraylist){
