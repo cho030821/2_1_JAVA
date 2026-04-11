@@ -8,7 +8,7 @@ public class studentInfoTest {
         StudentInfo studentInfo2 = new StudentInfo(111,"홍길동");
 
         System.out.println(studentInfo1.equals(studentInfo2));
-        System.out.println(studentInfo1.name());
+        System.out.println(studentInfo1.id());
         System.out.println(studentInfo2);
 
     }

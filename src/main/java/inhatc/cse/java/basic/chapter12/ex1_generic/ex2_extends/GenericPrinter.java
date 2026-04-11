@@ -1,14 +1,11 @@
 package main.java.inhatc.cse.java.basic.chapter12.ex1_generic.ex2_extends;
 
-public class GenericPrinter<T> {
+/**
+ * 제네릭 클래스
+ * @param <T>
+ */
+public class GenericPrinter<T extends Material> {
     private T material;
-
-    public GenericPrinter() {
-
-    }
-
-    public GenericPrinter(Plastic plastic) {
-    }
 
     public T getMaterial() {
         return material;
@@ -18,5 +15,11 @@ public class GenericPrinter<T> {
         this.material = material;
     }
 
+    public String toString() {
+        return material.toString();
+    }
 
+    public void printing() {
+        material.doPrinting(); // T가 Material의 자손이므로 호출 가능
+    }
 }

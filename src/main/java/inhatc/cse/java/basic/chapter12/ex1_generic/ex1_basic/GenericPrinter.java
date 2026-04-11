@@ -6,7 +6,9 @@ public class    GenericPrinter<T> {
     public GenericPrinter() {
 
     }
-
+    public GenericPrinter(T material){
+        this.material = material;
+    }
     public T getMaterial() {
         return material;
     }

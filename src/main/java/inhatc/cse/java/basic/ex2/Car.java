@@ -1,4 +1,4 @@
-package inhatc.cse.java.basic.ex2;
+package main.java.inhatc.cse.java.basic.ex2;
 
 public class Car {
     private String name;	// 자동차 이름

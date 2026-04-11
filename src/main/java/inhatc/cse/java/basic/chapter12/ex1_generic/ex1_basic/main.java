@@ -7,13 +7,13 @@ public class main {
 
         // 1. 플라스틱 전용 3D 프린터 만들기
         // GenericPrinter에 <Plastic>을 붙여서 "이 프린터는 플라스틱만 씁니다"라고 정의합니다.
-        GenericPrinter<Plastic> plasticGenericPrinter = new GenericPrinter<>();
+        GenericPrinter<Plastic> plasticGenericPrinter = new GenericPrinter<>(new Plastic());
 
         // 플라스틱 재료 객체 생성
-        Plastic plastic = new Plastic();
-
-        // 프린터에 플라스틱 재료를 넣음 (세팅)
-        plasticGenericPrinter.setMaterial(plastic);
+//        Plastic plastic = new Plastic();
+//
+//        // 프린터에 플라스틱 재료를 넣음 (세팅)
+//        plasticGenericPrinter.setMaterial(plastic);
 
         // (참고) 이 줄은 값을 가져오기만 하고 저장/출력을 안 해서 실제로는 아무 일도 일어나지 않아요!
         plasticGenericPrinter.getMaterial();

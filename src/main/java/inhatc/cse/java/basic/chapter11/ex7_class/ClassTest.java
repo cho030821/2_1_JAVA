@@ -7,6 +7,7 @@ public class ClassTest {
         System.out.println(aClass.getName());
         Class<Person> personClass = Person.class;
         System.out.println(personClass.getName());
+        System.out.println(personClass.getMethods());
 
         Class<?> aClass1 = Class.forName("main.java.inhatc.cse.java.basic.chapter11.ex7_class.Person");
         System.out.println(aClass1.getName());
