@@ -14,6 +14,8 @@ public class BankAccount {
     public void printBalance(){
         System.out.println("현재 잔액 : " + balance+ "원");
     }
+
+    
     class Transaction {
         private int amount;
 
