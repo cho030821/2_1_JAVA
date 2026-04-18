@@ -9,11 +9,6 @@ public class BankAccount {
         this.balance = balance;
     }
 
-
-
-    public void printBalance(){
-        System.out.println("현재 잔액 : " + balance+ "원");
-    }
     class Transaction {
         private int amount;
 
@@ -21,16 +16,19 @@ public class BankAccount {
             this.amount = amount;
         }
 
-        public void deposit(){
+        public void deposit() {
             balance += amount;
-            System.out.println(owner+ " 계좌에 "+ amount+"원 입급");
+            System.out.println(owner + " 계좌에 " + amount + "원 입금");
         }
 
-        public void withdraw(){
+        public void withdraw() {
             balance -= amount;
-            System.out.println(owner + " 계좌에서 " + amount +"원 출금");
-
+            System.out.println(owner + " 계좌에서 " + amount + "원 출금");
         }
-
     }
+
+    public void printBalance() {
+        System.out.println(owner + " 계좌의 현재 잔액: " + balance + "원");
+    }
+
 }
