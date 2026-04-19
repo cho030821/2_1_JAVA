@@ -6,19 +6,26 @@ import java.util.TreeMap;
 public class TreeMapTest {
     static void main(String[] args) {
         Map<String, Integer> scores = new TreeMap<>();
-        scores.put("철수",90);
-        scores.put("영희",85);
-        scores.put("영희",88);
-        scores.put("민수",95);
-        scores.put("흥민",85);
-        scores.put("기철",85);
 
+        // 데이터 추가
+        scores.put("철수", 90);
+        scores.put("영희", 85);
+        scores.put("민수", 95);
+        scores.put("지성", 93);
+        scores.put("영희", 88); // 값 덮어쓰기
 
-        System.out.println(scores); //자바에서 중괄호는 집합
+        // 자동 정렬 출력
+        System.out.println("점수 목록: " + scores);
 
-        System.out.println("민수 : " + ((TreeMap<String,Integer>)scores).tailMap("민수"));
-        System.out.println("철수 : " + ((TreeMap<String,Integer>)scores).ceilingEntry("철수"));
-        Map<String, Integer> ss = new TreeMap<>();
+        // 범위 조회
+        System.out.println("민수 이상: " + ((TreeMap<String, Integer>) scores).tailMap("민수"));
+        System.out.println("지성 이상: " + ((TreeMap<String, Integer>) scores).tailMap("지성"));
+
+        // 반복 출력
+        for (Map.Entry<String, Integer> entry : scores.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
     }
 }
+
