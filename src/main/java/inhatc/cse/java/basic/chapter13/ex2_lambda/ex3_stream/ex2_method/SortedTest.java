@@ -1,6 +1,7 @@
 package main.java.inhatc.cse.java.basic.chapter13.ex2_lambda.ex3_stream.ex2_method;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class SortedTest {
@@ -14,7 +15,7 @@ public class SortedTest {
         System.out.println("");
 
         fruits.stream()
-                .sorted((f1,f2)->Integer.compare(f1.length(),f2.length()))
+                .sorted(Comparator.comparingInt(String::length))
                 .limit(2)
                 .forEach(f -> System.out.println(f));
     }
