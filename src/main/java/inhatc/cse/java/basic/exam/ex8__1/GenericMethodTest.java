@@ -9,8 +9,7 @@ public class GenericMethodTest {
         System.out.println(getMax("apple", "banana"));
     }
 
-    public static <T extends Comparable<T>> T getMax(T a, T b){
-        return a.compareTo(b) >=0 ? a:b;
+    public static <T extends Comparable<T>> T getMax(T a , T b){
+       return a.compareTo(b) >= 0 ? a:b;
     }
-
 }
