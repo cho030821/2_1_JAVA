@@ -1,0 +1,14 @@
+package main.java.inhatc.cse.java.basic.exam.ex7;
+
+public class GenericPrinter <T extends Material>{
+    T material;
+
+    public GenericPrinter(T material) {
+        this.material = material;
+    }
+
+    public void doPrint(){
+        material.doPrinting();
+    }
+
+}
