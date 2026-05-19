@@ -13,6 +13,9 @@ public class ServerChat extends JFrame {
     private JButton Button;
     private ServerSocket server = null;
     private Socket socket = null;
+    private BufferedReader in = null;
+    private BufferedWriter out = null;
+
 
     public ServerChat() {
         setTitle("서버");
@@ -33,15 +36,38 @@ public class ServerChat extends JFrame {
     private void inputMsg() {
 
 
-        try (BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));) {
-            String text = textField1.getText();
-            textArea1.append(text + "\n");
-            textField1.setText("");
-            out.write(text + "\n");
-            out.flush();
-            textField1.requestFocus();
+        try {
+            socket = new Socket("localhost", 9999);
+
+
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+            textArea1.append("[서버에 연결되었습니다]\n");
+
+
+            Thread receiveThread = new Thread(() -> {
+                try {
+                    while (true) {
+                        String inMsg = in.readLine();
+                        if (inMsg == null) {
+                            textArea1.append("[서버와 연결이 끊어졌습니다]\n");
+                            break;
+                        }
+
+                        textArea1.append("서버 >> : " + inMsg + "\n");
+                    }
+                } catch (IOException e) {
+                    textArea1.append("[서버 연결 종료]\n");
+                } finally {
+
+                }
+            });
+            receiveThread.start();
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            textArea1.append("[서버 연결 실패]\n");
+            e.printStackTrace();
         }
 
     }
