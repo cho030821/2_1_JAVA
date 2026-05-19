@@ -18,7 +18,7 @@ public class ServerChat extends JFrame {
         setTitle("서버");
         setSize(400, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        setResizable(false);
         setLocationRelativeTo(null);
         add(panel1);
         setVisible(true);
@@ -31,13 +31,15 @@ public class ServerChat extends JFrame {
     }
 
     private void inputMsg() {
-        String text = textField1.getText();
-        textArea1.append(text + "\n");
-        textField1.setText("");
+
 
         try (BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));) {
+            String text = textField1.getText();
+            textArea1.append(text + "\n");
+            textField1.setText("");
             out.write(text + "\n");
             out.flush();
+            textField1.requestFocus();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
