@@ -1,4 +1,4 @@
-package main.java.inhatc.cse.java.app.ex4_MultiChat;
+package inhatc.cse.java.app.ex4_MultiChat;
 
 import javax.swing.*;
 import java.io.*;
@@ -14,7 +14,7 @@ public class ServerChat extends JFrame {
     private JButton Button;
 
     private ServerSocket server = null;
-    public ArrayList<ServerThread> threadList;
+    public ArrayList<main.java.inhatc.cse.java.app.ex4_MultiChat.ServerThread> threadList;
 
     public ServerChat() {
         setTitle("멀티 채팅 서버");

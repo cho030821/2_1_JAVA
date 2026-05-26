@@ -121,8 +121,8 @@
       </item>
     </group>
   </component>
-
   <component name="uidesigner-configuration">
+    <option name="GENERATE_SOURCES_FINAL_FIELDS" value="true" />
     <option name="DEFAULT_LAYOUT_MANAGER" value="BorderLayout" />
   </component>
 </project>

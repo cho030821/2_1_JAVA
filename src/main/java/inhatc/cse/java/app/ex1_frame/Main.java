@@ -1,4 +1,4 @@
-package main.java.inhatc.cse.java.app.ex1_frame;
+package inhatc.cse.java.app.ex1_frame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

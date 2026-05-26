@@ -1,4 +1,4 @@
-package main.java.inhatc.cse.java.app.ex4_MultiChat;
+package inhatc.cse.java.app.ex4_MultiChat;
 
 import javax.swing.*;
 import java.io.*;
